@@ -1,8 +1,9 @@
 #!/bin/bash
 set -e
 DIR="$(cd "$(dirname "$0")" && pwd)"
-APP="/Applications/Cache Cleaner.app"
+APP="/Applications/Purgeable.app"
 
+pkill -f "Purgeable.app/Contents/MacOS/Purgeable" 2>/dev/null || true
 pkill -f "Cache Cleaner.app/Contents/MacOS/CacheCleaner" 2>/dev/null || true
 sleep 0.5
 
@@ -13,7 +14,7 @@ mkdir -p "$APP/Contents/Resources"
 clang++ -std=c++17 -ObjC++ -fobjc-arc -O2 \
   -framework Cocoa \
   -framework UserNotifications \
-  -o "$APP/Contents/MacOS/CacheCleaner" \
+  -o "$APP/Contents/MacOS/Purgeable" \
   "$DIR/main.mm"
 
 cp "$DIR/Info.plist" "$APP/Contents/Info.plist"

@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key>
-    <string>Cache Cleaner</string>
+    <string>Purgeable</string>
     <key>CFBundleIdentifier</key>
-    <string>com.sahad.cachecleaner</string>
+    <string>com.purgeable.app</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>CFBundleShortVersionString</key>
     <string>1.0</string>
     <key>CFBundleExecutable</key>
-    <string>CacheCleaner</string>
+    <string>Purgeable</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleIconFile</key>

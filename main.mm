@@ -107,7 +107,7 @@ static const uint64_t kLowSpaceThresholdBytes = 15ULL * 1024 * 1024 * 1024; // 1
     _scanning = NO;
 
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    NSImage *statusIcon = [NSImage imageWithSystemSymbolName:@"internaldrive" accessibilityDescription:@"Cache Cleaner"];
+    NSImage *statusIcon = [NSImage imageWithSystemSymbolName:@"internaldrive" accessibilityDescription:@"Purgeable"];
     [statusIcon setTemplate:YES];
     _statusItem.button.image = statusIcon;
     _statusItem.button.imagePosition = NSImageLeading;
@@ -136,7 +136,7 @@ static const uint64_t kLowSpaceThresholdBytes = 15ULL * 1024 * 1024 * 1024; // 1
     CGFloat y = kPad;
 
     NSTextField *title = MakeLabel(NSMakeRect(kPad, y, kWidth - 2 * kPad, 18),
-                                    @"Cache Cleaner", 14, NSFontWeightSemibold, [NSColor labelColor]);
+                                    @"Purgeable", 14, NSFontWeightSemibold, [NSColor labelColor]);
     [content addSubview:title];
     y += 22;
 
